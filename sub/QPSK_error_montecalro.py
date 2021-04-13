@@ -31,4 +31,4 @@ def errorM(M,eta,visibility,dark,trysim,meanphotonmax):
 
         Error+=[error]
         meanphoton+=[m]
-    return meanphoton,Error,Success
+    return meanphoton,Success,Error

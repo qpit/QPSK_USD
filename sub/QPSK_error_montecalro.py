@@ -22,7 +22,6 @@ def errorM(M,eta,visibility,dark,trysim,meanphotonmax):
 
 
         suc=(suc0/trysim+suc1/trysim+suc2/trysim+suc3/trysim)/float(4)
-        print(suc0)
         Success+=[suc]
         error=(error0/trysim+error1/trysim+error2/trysim+error3/trysim)/float(4)
         if (error !=0 and suc !=0):

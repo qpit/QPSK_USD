@@ -1,17 +1,7 @@
 import numpy as np
-import scipy as sp
-import scipy.optimize
 import math
 from math import erfc
 from math import erf
-import sympy as sym
-from sympy.solvers import solve
-from sympy import Symbol
-import matplotlib
-matplotlib.use('qt5agg')
-import matplotlib.pyplot as plt
-from matplotlib import ticker
-
 
 def USDopt(n):
     lam0=2*np.exp(-n)*(np.cosh(n)+np.cos(n))

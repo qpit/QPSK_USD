@@ -57,37 +57,3 @@ def Heterodyne_error (n, ptharray, delta, step):
         error=Heterodyne_success(n, m, delta, ptharray[i]) - (erf(np.sqrt(n)/np.sqrt(2)-m*delta)- erf(np.sqrt(n)/np.sqrt(2)-(m+1)*delta))*erfc(ptharray[i] + np.sqrt(n) / np.sqrt(2))/4
         i=i+1
     return error
-#
-#
-n=1
-step=10
-success=0.09428125
-
-# # def USD_Heterodyne_opt (n,success,step):
-# xmax=n*20
-# xmin=0
-# delta=(xmax-xmin)/step
-# mineq=0.001
-# mineqarray=[]
-# ptharraymin=[]
-# for pth0 in np.arange(0,10,0.1)[::-1]:
-#     for pth1 in np.arange(0,pth0,0.1)[::-1]:
-#         for pth2 in np.arange(0,pth1,0.1)[::-1]:
-#             for pth3 in np.arange(0,pth2,0.1)[::-1]:
-#                 for pth4 in np.arange(0,pth3,0.1)[::-1]:
-#                     for pth5 in np.arange(0,pth4,0.1)[::-1]:
-#                         for pth6 in np.arange(0,pth5,0.1)[::-1]:
-#                             for pth7 in np.arange(0,pth6,0.1)[::-1]:
-#                                 for pth8 in np.arange(0,pth7,0.1)[::-1]:
-#                                     for pth9 in np.arange(0,pth8,0.1)[::-1]:
-#                                         ptharray=[pth0,pth1,pth2,pth3,pth4,pth5,pth6,pth7,pth8,pth9]
-#                                         eq=abs(Heterodyne_success(n, ptharray, delta, step)-success)
-#                                         if eq<mineq:
-#                                             mineqarray+=[eq]
-#                                             ptharraymin+=[ptharray]
-#
-# # PeHetero=Heterodyne_error (n, ptharraymin, delta, step)
-# # return mineqarray,ptharraymin
-#
-# print(mineqarray)
-# print(ptharray)
